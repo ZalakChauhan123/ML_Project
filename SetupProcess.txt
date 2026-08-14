@@ -1,0 +1,21 @@
+1️⃣ INTIAL BASIC SETUP STEPS
+----------------------------------------------
+1. Create Github Repo
+2. Create & Activate Virtual Environment
+
+3. Create README.md & .gitignore file in Github repo itself
+4. Pull README.md & .gitignore Files using git pull command in system
+
+4.1 Create src Folder & inside create __init__.py file
+5. Create setup.py file & requirements.txt File
+
+6. Add Libraries in requirements.txt File.
+    Last Line should be "-e ." - It connect with setup.py File
+
+7. In setup.py file create code till # Intial Setup Code Ends here... Line
+    get_requirements Function is for listing multiple folders
+
+8. Run " pip install -r requirements.txt ". This will create "ML_Projects.egg-info" Folder in main Folder
+    📌NOTE : Project Code only inside "src" Folder only. At this Stage Basic Setup is Done 👌🚀🚀🚀
+----------------------------------------------
+😎😎😎😎😎
