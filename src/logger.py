@@ -2,17 +2,15 @@ import logging
 import os
 from datetime import datetime
 
-
-# log_path = os.path.join(os.getcwd(), "logs", LOG_FILE)
-LOG_DIR = os.path.join(os.getcwd(), "logs")
+LOG_FILE = f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
+log_path = os.path.join(os.getcwd(), "logs", LOG_FILE)
 os.makedirs(
-    LOG_DIR,
+    log_path,
     exist_ok = True
 )
 
-LOG_FILE = f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
 LOG_FILE_PATH = os.path.join(
-    LOG_DIR,
+    log_path,
     LOG_FILE
 )
 
@@ -21,6 +19,3 @@ logging.basicConfig(
     format = "[ %(asctime)s ] %(lineno)d %(name)s - %(levelname)s - %(message)s",
     level = logging.INFO
 )
-
-if __name__ == "__main__":
-    logging.info("Logging has started")
