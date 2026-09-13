@@ -12,6 +12,10 @@ from src.logger import logging
 from src.components.data_transform import DataTransformationConfig
 from src.components.data_transform import DataTransformation
 
+# Model Training Imports
+from src.components.model_trainer import ModelTrainerConfig
+from src.components.model_trainer import ModelTrainer
+
 
 # Use - Gives required paths to DataIngestion Class
 @dataclass
@@ -53,4 +57,7 @@ if __name__ == "__main__":
     train_data, test_data = obj.initiate_data_ingestion()
 
     data_transformation = DataTransformation()
-    data_transformation.initiate_data_transformation(train_data, test_data)
+    train_arr, test_arr,_= data_transformation.initiate_data_transformation(train_data, test_data)
+
+    model_trainer = ModelTrainer()
+    print(model_trainer.intiate_model_trainer(train_arr, test_arr))
